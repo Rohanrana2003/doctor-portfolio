@@ -46,3 +46,21 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: teal;
 }
+/* Glass morphism enhancement */
+.backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+@media (max-width: 450px) {
+  .doctor-name {
+    max-width: 264px;
+  }
+}

@@ -8,7 +8,7 @@ const About = () => {
           <span className="inline-block bg-teal-100 text-teal-800 text-sm font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
             About The Doctor
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl text-[36px] md:text-5xl  font-bold text-gray-900 mb-4">
             Meet <span className="text-teal-600">Dr. Devanshi Sharma</span>
           </h2>
           <div className="w-24 h-1 bg-teal-500 mx-auto"></div>
@@ -24,7 +24,7 @@ const About = () => {
                 className="w-full h-auto object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white text-teal-600 px-6 py-2 rounded-full shadow-md">
+            <div className="text-sm md:text-[16px] text-center absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white text-teal-600 px-6 py-2 rounded-full shadow-md">
               <span className="font-bold">MBBS, MD Medicine</span>
             </div>
           </div>
@@ -32,14 +32,14 @@ const About = () => {
           {/* Doctor Information */}
           <div className="space-y-8">
             <div className="prose max-w-none text-gray-600">
-              <p className="text-lg leading-relaxed">
+              <p className="text-[15px] text-justify md:text-lg leading-relaxed">
                 Dr. Devanshi Sharma is a board-certified Internal Medicine
                 specialist with over 7 years of clinical experience. Her
                 patient-centered approach combines evidence-based medicine with
                 compassionate care, ensuring optimal health outcomes for her
                 patients.
               </p>
-              <p className="text-lg leading-relaxed">
+              <p className="text-[15px] text-justify md:text-lg leading-relaxed">
                 After graduating with honors from the prestigious Adesh Medical
                 College, she completed her residency and served as an Assistant
                 Professor, training future generations of physicians.
@@ -67,7 +67,7 @@ const About = () => {
                   </div>
                   <h3 className="text-lg font-bold text-gray-800">Education</h3>
                 </div>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-sm lg:text-[16px]">
                   MBBS, MD (Medicine)
                   <br />
                   Adesh Medical College, Mohari
@@ -95,7 +95,7 @@ const About = () => {
                     Experience
                   </h3>
                 </div>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-sm lg:text-[16px]">
                   7+ Years Clinical Practice
                   <br />
                   Former Assistant Professor
@@ -123,7 +123,7 @@ const About = () => {
                     Specialization
                   </h3>
                 </div>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-sm lg:text-[16px]">
                   Internal Medicine
                   <br />
                   Chronic Disease Management
@@ -149,7 +149,7 @@ const About = () => {
                   </div>
                   <h3 className="text-lg font-bold text-gray-800">Languages</h3>
                 </div>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-sm lg:text-[16px]">
                   English, Hindi, Punjabi
                   <br />
                   Fluent in all three
@@ -161,7 +161,7 @@ const About = () => {
             <div className="flex flex-wrap gap-4 pt-4">
               <a
                 href="#contact"
-                className="bg-white text-teal-600 border border-teal-600 px-8 py-3 rounded-full font-semibold hover:bg-teal-50 transition-colors duration-300"
+                className="bg-white text-sm md:text-[16px] text-teal-600 border border-teal-600 px-6 md:px-8 py-3 rounded-full font-semibold hover:bg-teal-50 transition-colors duration-300"
               >
                 Book Appointment
               </a>

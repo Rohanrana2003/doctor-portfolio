@@ -53,8 +53,8 @@ const Hero = () => {
       id="home"
       className="hero-container min-h-screen flex justify-center items-center relative"
     >
-      <div className="black-overlay bg-black/50 absolute z-0 min-h-screen min-w-full"></div>
-      <div className="image-container fixed -z-10 top-0 w-full h-full">
+      <div className="black-overlay select-none bg-black/50 absolute z-0 min-h-screen min-w-full"></div>
+      <div className="image-container select-none fixed -z-10 top-0 w-full h-full">
         <img
           src="/assets/hero-bg.jpg"
           alt="hero-img"
@@ -64,35 +64,38 @@ const Hero = () => {
       <div className="text-container text-white relative z-10 max-w-6xl px-4 md:px-8 lg:px-16 flex flex-col items-start gap-8">
         <label
           ref={labelRef}
-          className="text-[21px] p-1 px-3 font-semibold bg-amber-700 -mb-8"
+          className="text-[16px] md:text-[21px] p-1 px-3 font-semibold bg-amber-700 -mb-8"
         >
           Know about
         </label>
         <h1
           ref={nameRef}
-          className="text-5xl md:text-6xl lg:text-7xl font-[600] leading-tight"
+          className="doctor-name   text-[40px] md:text-6xl lg:text-7xl font-[600] leading-tight"
         >
-          {"Dr. Devanshi Sharma".split("").map((char, i) => (
+          {"Dr. Devanshi\u00A0\u00A0Sharma".split("").map((char, i) => (
             <span key={i} style={{ display: "inline-block" }}>
               {char === " " ? "\u00A0" : char}
             </span>
           ))}
         </h1>
-        <p className="text-lg max-w-2xl" ref={paraRef}>
+        <p className="text-[15px]  md:text-lg max-w-2xl" ref={paraRef}>
           Dr. Devanshi Sharma has received MBBS & MD qualifications from the
           prestigious institute of Adesh Medical College. She has served as an
           Assistant Professor in the Department of Medicine
         </p>
-        <div className="flex flex-wrap gap-4" ref={buttonsRef}>
+        <div
+          className="flex flex-col md:flex-row flex-wrap gap-4 text-[15px] md:text-[17px]  "
+          ref={buttonsRef}
+        >
           <a
             href="#appointment"
-            className="bg-teal-700 text-white py-3 px-6 rounded-lg font-bold hover:bg-teal-900 transition-colors duration-300"
+            className="bg-teal-700 w-fit  text-white  py-3 px-5 md:py-3 md:px-6 rounded-lg font-bold hover:bg-teal-900 transition-colors duration-300"
           >
             Book Appointment
           </a>
           <a
             href="#contact"
-            className="bg-transparent border-2 border-white text-white py-3 px-6 rounded-lg font-bold hover:bg-white hover:text-gray-800 transition-colors duration-300"
+            className="bg-transparent w-fit border-2 border-white text-white py-2 px-5  md:py-3 md:px-6 rounded-lg font-bold hover:bg-white hover:text-gray-800 transition-colors duration-300"
           >
             Contact Us
           </a>
