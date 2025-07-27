@@ -1,175 +1,302 @@
-import React from "react";
+import {
+  GraduationCap,
+  Award,
+  Clock,
+  Users,
+  Heart,
+  Stethoscope,
+  MapPin,
+  Calendar,
+  BookOpen,
+  Star,
+  CheckCircle,
+  Phone,
+  Mail,
+} from "lucide-react";
 
-const About = () => {
+const About = ({ doctorData }) => {
+  {
+    console.log(doctorData.titles);
+  }
+  // const doctorData = {
+  //   name: "Dr. Divanshee Sharma",
+  //   specialty: "Diabetologist ",
+  //   image: "/assets/doctor-pic1.png",
+  //   title: "Chief of Diabetology ",
+  //   experience: "7+ Years",
+  //   patients: "2000+",
+  //   rating: "4.9",
+  //   location: "Mohali Punjab",
+  //   phone: "+1 (555) 123-4567",
+  //   email: "dr.sarah@hospital.com",
+  //   about:
+  //     "Dr. Devanshi Sharma, a compassionate and patient-focused diabetologist (or endocrinologist), specializes in holistic diabetes care, focusing on minimal medication burden and long-term wellness",
+  //   education: [
+  //     {
+  //       degree: "MD - Doctor of Medicine",
+  //       institution: "Harvard Medical School",
+  //       year: "2008",
+  //     },
+  //     {
+  //       degree: "Residency in Internal Medicine",
+  //       institution: "Johns Hopkins Hospital",
+  //       year: "2011",
+  //     },
+  //     {
+  //       degree: "Fellowship in Cardiology",
+  //       institution: "Mayo Clinic",
+  //       year: "2014",
+  //     },
+  //   ],
+  //   certifications: [
+  //     "Board Certified in Cardiovascular Disease",
+  //     "Board Certified in Internal Medicine",
+  //     "Advanced Cardiac Life Support (ACLS)",
+  //     "Fellow of American College of Cardiology",
+  //   ],
+  //   specializations: [
+  //     "Interventional Cardiology",
+  //     "Heart Failure Management",
+  //     "Preventive Cardiology",
+  //     "Cardiac Catheterization",
+  //     "Echocardiography",
+  //     "Nuclear Cardiology",
+  //   ],
+  //   achievements: [
+  //     "Top Doctor Award - New York Magazine (2023)",
+  //     "Excellence in Patient Care - Hospital Recognition (2022)",
+  //     "Published 25+ research papers in peer-reviewed journals",
+  //     "Speaker at International Cardiology Conference (2023)",
+  //   ],
+  // };
+
   return (
-    <section className="py-24 px-4 md:px-8 lg:px-16 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <span className="inline-block bg-teal-100 text-teal-800 text-sm font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
-            About The Doctor
-          </span>
-          <h2 className="text-4xl text-[36px] md:text-5xl  font-bold text-gray-900 mb-4">
-            Meet <span className="text-teal-600">Dr. Devanshi Sharma</span>
-          </h2>
-          <div className="w-24 h-1 bg-teal-500 mx-auto"></div>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16">
+        {/* Header Section */}
+        <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 sm:gap-6 lg:gap-8">
+            {/* Doctor Image */}
+            <div className="relative flex-shrink-0">
+              <img
+                src={doctorData.image}
+                alt={doctorData.name}
+                className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-2xl object-cover shadow-lg border-4 border-blue-100"
+              />
+              <div className="absolute -bottom-2 -right-2 sm:-bottom-3 sm:-right-3 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 bg-white rounded-full"></div>
+              </div>
+            </div>
+
+            {/* Doctor Info */}
+            <div className="flex-1 text-center lg:text-left">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
+                {doctorData.name}
+              </h1>
+              <p className="text-lg sm:text-xl lg:text-2xl text-blue-600 font-semibold mb-1 sm:mb-2">
+                {doctorData.specialty}
+              </p>
+
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-4 sm:mb-6">
+                {doctorData.titles.map((title, i) => (
+                  <i key={i}>{title}, </i>
+                ))}
+              </p>
+
+              {/* Quick Stats */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 lg:gap-4 mb-4 sm:mb-6">
+                <div className="bg-blue-50 rounded-lg p-2 sm:p-3 text-center">
+                  <Clock className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-blue-600 mx-auto mb-1" />
+                  <p className="text-xs sm:text-sm text-gray-600">Experience</p>
+                  <p className="text-sm sm:text-base font-semibold text-gray-900">
+                    {doctorData.experience}
+                  </p>
+                </div>
+                <div className="bg-green-50 rounded-lg p-2 sm:p-3 text-center">
+                  <Users className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-green-600 mx-auto mb-1" />
+                  <p className="text-xs sm:text-sm text-gray-600">Patients</p>
+                  <p className="text-sm sm:text-base font-semibold text-gray-900">
+                    {doctorData.patients}
+                  </p>
+                </div>
+                <div className="bg-yellow-50 rounded-lg p-2 sm:p-3 text-center">
+                  <Star className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-yellow-600 mx-auto mb-1" />
+                  <p className="text-xs sm:text-sm text-gray-600">Rating</p>
+                  <p className="text-sm sm:text-base font-semibold text-gray-900">
+                    {doctorData.rating} ⭐
+                  </p>
+                </div>
+                <div className="bg-purple-50 rounded-lg p-2 sm:p-3 text-center">
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-purple-600 mx-auto mb-1" />
+                  <p className="text-xs sm:text-sm text-gray-600">Location</p>
+                  <p className="text-sm sm:text-base font-semibold text-gray-900">
+                    {doctorData.location}
+                  </p>
+                </div>
+              </div>
+
+              {/* Contact Info */}
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 lg:gap-4 justify-center lg:justify-start">
+                <div className="flex items-center bg-blue-100 rounded-full px-3 sm:px-4 py-1 sm:py-2">
+                  <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 mr-1 sm:mr-2" />
+                  <span className="text-xs sm:text-sm text-blue-800 font-medium">
+                    {doctorData.phone}
+                  </span>
+                </div>
+                <div className="flex items-center bg-green-100 rounded-full px-3 sm:px-4 py-1 sm:py-2">
+                  <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-green-600 mr-1 sm:mr-2" />
+                  <span className="text-xs sm:text-sm text-green-800 font-medium">
+                    {doctorData.email}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Doctor Image - Clean and Simple */}
-          <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-lg border-8 bg-teal-800 border-teal-100">
-              <img
-                src="/assets/doctor-pic.webp"
-                alt="Dr. Devanshi Sharma"
-                className="w-full h-auto object-cover"
-              />
+        {/* About Section */}
+        <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8">
+          <div className="flex items-center mb-4 sm:mb-6">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-blue-100 rounded-full flex items-center justify-center mr-2 sm:mr-3 lg:mr-4">
+              <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-blue-600" />
             </div>
-            <div className="text-sm md:text-[16px] text-center absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white text-teal-600 px-6 py-2 rounded-full shadow-md">
-              <span className="font-bold">MBBS, MD Medicine</span>
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
+              About Dr. {doctorData.name.split(" ")[1]}
+            </h2>
+          </div>
+          <p className="text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed">
+            {doctorData.about}
+          </p>
+        </div>
+
+        {/* Education & Certifications */}
+        <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mb-6 sm:mb-8">
+          {/* Education */}
+          <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8">
+            <div className="flex items-center mb-4 sm:mb-6">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-green-100 rounded-full flex items-center justify-center mr-2 sm:mr-3 lg:mr-4">
+                <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-green-600" />
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
+                Education
+              </h3>
+            </div>
+            <div className="space-y-3 sm:space-y-4">
+              {doctorData.education.map((edu, index) => (
+                <div
+                  key={index}
+                  className="border-l-4 border-blue-500 pl-3 sm:pl-4"
+                >
+                  <h4 className="text-sm sm:text-base font-semibold text-gray-900">
+                    {edu.degree}
+                  </h4>
+                  <p className="text-xs sm:text-sm text-blue-600 font-medium">
+                    {edu.institution}
+                  </p>
+                  <p className="text-xs text-gray-600">{edu.year}</p>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Doctor Information */}
-          <div className="space-y-8">
-            <div className="prose max-w-none text-gray-600">
-              <p className="text-[15px] text-justify md:text-lg leading-relaxed">
-                Dr. Devanshi Sharma is a board-certified Internal Medicine
-                specialist with over 7 years of clinical experience. Her
-                patient-centered approach combines evidence-based medicine with
-                compassionate care, ensuring optimal health outcomes for her
-                patients.
-              </p>
-              <p className="text-[15px] text-justify md:text-lg leading-relaxed">
-                After graduating with honors from the prestigious Adesh Medical
-                College, she completed her residency and served as an Assistant
-                Professor, training future generations of physicians.
-              </p>
+          {/* Specializations */}
+          <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8">
+            <div className="flex items-center mb-4 sm:mb-6">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-purple-100 rounded-full flex items-center justify-center mr-2 sm:mr-3 lg:mr-4">
+                <Stethoscope className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
+                Specializations
+              </h3>
             </div>
-
-            {/* Qualifications - Clean Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                <div className="flex items-center mb-3">
-                  <div className="bg-teal-100 p-2 rounded-full mr-3">
-                    <svg
-                      className="w-5 h-5 text-teal-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                      ></path>
-                    </svg>
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-800">Education</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
+              {doctorData.specializations.map((spec, index) => (
+                <div
+                  key={index}
+                  className="bg-blue-50 rounded-lg p-2 sm:p-3 text-center"
+                >
+                  <span className="text-xs sm:text-sm text-blue-800 font-medium">
+                    {spec}
+                  </span>
                 </div>
-                <p className="text-gray-600 text-sm lg:text-[16px]">
-                  MBBS, MD (Medicine)
-                  <br />
-                  Adesh Medical College, Mohari
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                <div className="flex items-center mb-3">
-                  <div className="bg-blue-100 p-2 rounded-full mr-3">
-                    <svg
-                      className="w-5 h-5 text-blue-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-800">
-                    Experience
-                  </h3>
-                </div>
-                <p className="text-gray-600 text-sm lg:text-[16px]">
-                  7+ Years Clinical Practice
-                  <br />
-                  Former Assistant Professor
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                <div className="flex items-center mb-3">
-                  <div className="bg-purple-100 p-2 rounded-full mr-3">
-                    <svg
-                      className="w-5 h-5 text-purple-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-800">
-                    Specialization
-                  </h3>
-                </div>
-                <p className="text-gray-600 text-sm lg:text-[16px]">
-                  Internal Medicine
-                  <br />
-                  Chronic Disease Management
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                <div className="flex items-center mb-3">
-                  <div className="bg-amber-100 p-2 rounded-full mr-3">
-                    <svg
-                      className="w-5 h-5 text-amber-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
-                      ></path>
-                    </svg>
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-800">Languages</h3>
-                </div>
-                <p className="text-gray-600 text-sm lg:text-[16px]">
-                  English, Hindi, Punjabi
-                  <br />
-                  Fluent in all three
-                </p>
-              </div>
+              ))}
             </div>
+          </div>
+        </div>
 
-            {/* Call to Action - Clean Buttons */}
-            <div className="flex flex-wrap gap-4 pt-4">
-              <a
-                href="#contact"
-                className="bg-white text-sm md:text-[16px] text-teal-600 border border-teal-600 px-6 md:px-8 py-3 rounded-full font-semibold hover:bg-teal-50 transition-colors duration-300"
-              >
-                Book Appointment
-              </a>
+        {/* Specializations & Achievements */}
+        <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+          {/* Certifications */}
+          {/* <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8">
+            <div className="flex items-center mb-4 sm:mb-6">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-2 sm:mr-3 lg:mr-4">
+                <Award className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-yellow-600" />
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
+                Certifications
+              </h3>
             </div>
+            <div className="space-y-2 sm:space-y-3">
+              {doctorData.certifications.map((cert, index) => (
+                <div key={index} className="flex items-center">
+                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 sm:mr-3 flex-shrink-0" />
+                  <span className="text-xs sm:text-sm text-gray-700">
+                    {cert}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div> */}
+
+          {/* Achievements */}
+          {/* <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8">
+            <div className="flex items-center mb-4 sm:mb-6">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-orange-100 rounded-full flex items-center justify-center mr-2 sm:mr-3 lg:mr-4">
+                <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-orange-600" />
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
+                Achievements
+              </h3>
+            </div>
+            <div className="space-y-2 sm:space-y-3">
+              {doctorData.achievements.map((achievement, index) => (
+                <div key={index} className="flex items-start">
+                  <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-500 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0"></div>
+                  <span className="text-xs sm:text-sm text-gray-700">
+                    {achievement}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div> */}
+        </div>
+
+        {/* Call to Action */}
+        <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-4 sm:p-6 lg:p-8 mt-6 sm:mt-8 text-center text-white">
+          <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-4">
+            Ready to Schedule an Appointment?
+          </h3>
+          <p className="text-xs sm:text-sm text-blue-100 mb-4 sm:mb-6">
+            Experience exceptional cardiac care with Dr.{" "}
+            {doctorData.name.split(" ")[1]}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 lg:gap-4 justify-center">
+            <a
+              href="#appointment"
+              className="bg-white cursor-pointer text-blue-600 px-4 sm:px-6 lg:px-8 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold hover:bg-blue-50 transition-colors"
+            >
+              Book Appointment
+            </a>
+            <a
+              href="tel:7302204937"
+              className="border cursor-pointer border-white text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+            >
+              Contact Doctor
+            </a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
