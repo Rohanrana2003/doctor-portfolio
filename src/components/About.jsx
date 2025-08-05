@@ -15,61 +15,6 @@ import {
 } from "lucide-react";
 
 const About = ({ doctorData }) => {
-  {
-    console.log(doctorData.titles);
-  }
-  // const doctorData = {
-  //   name: "Dr. Divanshee Sharma",
-  //   specialty: "Diabetologist ",
-  //   image: "/assets/doctor-pic1.png",
-  //   title: "Chief of Diabetology ",
-  //   experience: "7+ Years",
-  //   patients: "2000+",
-  //   rating: "4.9",
-  //   location: "Mohali Punjab",
-  //   phone: "+1 (555) 123-4567",
-  //   email: "dr.sarah@hospital.com",
-  //   about:
-  //     "Dr. Devanshi Sharma, a compassionate and patient-focused diabetologist (or endocrinologist), specializes in holistic diabetes care, focusing on minimal medication burden and long-term wellness",
-  //   education: [
-  //     {
-  //       degree: "MD - Doctor of Medicine",
-  //       institution: "Harvard Medical School",
-  //       year: "2008",
-  //     },
-  //     {
-  //       degree: "Residency in Internal Medicine",
-  //       institution: "Johns Hopkins Hospital",
-  //       year: "2011",
-  //     },
-  //     {
-  //       degree: "Fellowship in Cardiology",
-  //       institution: "Mayo Clinic",
-  //       year: "2014",
-  //     },
-  //   ],
-  //   certifications: [
-  //     "Board Certified in Cardiovascular Disease",
-  //     "Board Certified in Internal Medicine",
-  //     "Advanced Cardiac Life Support (ACLS)",
-  //     "Fellow of American College of Cardiology",
-  //   ],
-  //   specializations: [
-  //     "Interventional Cardiology",
-  //     "Heart Failure Management",
-  //     "Preventive Cardiology",
-  //     "Cardiac Catheterization",
-  //     "Echocardiography",
-  //     "Nuclear Cardiology",
-  //   ],
-  //   achievements: [
-  //     "Top Doctor Award - New York Magazine (2023)",
-  //     "Excellence in Patient Care - Hospital Recognition (2022)",
-  //     "Published 25+ research papers in peer-reviewed journals",
-  //     "Speaker at International Cardiology Conference (2023)",
-  //   ],
-  // };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
       <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16">

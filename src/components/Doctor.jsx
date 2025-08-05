@@ -5,7 +5,7 @@ import Appointment from "./Appointment";
 import Contact from "./Contact";
 
 const Doctor = ({ data }) => {
-  // window.scrollTo(0, 0);
+  window.scrollTo(0, 0);
 
   return (
     <div>

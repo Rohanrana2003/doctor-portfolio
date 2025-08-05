@@ -2,15 +2,7 @@ import {
   Heart,
   Activity,
   Stethoscope,
-  Pill,
-  Eye,
-  Star,
-  CheckCircle,
-  Users,
-  Calendar,
-  BookOpen,
   Shield,
-  Zap,
   HeartPulse,
   Syringe,
   Scale,
@@ -20,6 +12,16 @@ import {
   Radiation,
   User,
   ScanFace,
+  Crosshair,
+  Thermometer,
+  Bone,
+  ScanLine,
+  Droplets,
+  Pill,
+  Footprints,
+  Salad,
+  Video,
+  Bed,
 } from "lucide-react";
 
 export const doctors = [
@@ -38,14 +40,14 @@ export const doctors = [
   {
     id: 2,
     name: "Dr. Sachin Madaan",
-    specialty: "Radiologist",
+    specialty: "Endovascular Surgeon and Radiologist",
     experience: "9+ Years",
     location: "Mohali, Punjab",
     rating: "4.8",
     patients: "2000+",
     image: "/assets/doctor-pic2.jpg",
     description:
-      "Dedicated radiologist providing accurate, timely imaging interpretations to support precise diagnosis and effective treatment plans.",
+      "Dedicated consultant and radiologist providing accurate, timely imaging interpretations to support precise diagnosis and effective treatment plans.",
   },
 ];
 
@@ -72,17 +74,17 @@ export const doctorMeenakshiData = {
       {
         degree: "MD - Doctor of Medicine",
         institution: "Adesh Medical College",
-        year: "2008",
+        year: "2013",
       },
       {
         degree: "Assistant Professor",
         institution: "Dept of General Medicine",
-        year: "2011",
+        year: "2016",
       },
       {
         degree: "Fellowship in DIABETES and METABOLISM ",
         institution: "AIIMS",
-        year: "2014",
+        year: "2019",
       },
     ],
     certifications: [
@@ -109,91 +111,79 @@ export const doctorMeenakshiData = {
   services: [
     {
       id: 1,
-      name: "HYPERTENSION",
-      description:
-        "Persistent high blood pressure requiring lifestyle and medical management.",
-      icon: HeartPulse,
+      name: "IN HOUSE PHARMACY",
+      description: "Access to essential medicines within the clinic premises.",
+      icon: Pill,
       color: "purple",
     },
     {
       id: 2,
-      name: "DIABETES",
+      name: "IN HOUSE LAB FACILITY",
       description:
-        "Chronic condition affecting blood sugar levels and insulin response.",
-      icon: Syringe,
+        "On-site laboratory for quick and accurate diagnostic tests.",
+      icon: FlaskConical,
       color: "blue",
     },
     {
       id: 3,
-      name: "THYROID DISORDERS",
+      name: "IN HOUSE ECG FACILITY",
       description:
-        "Imbalances in thyroid hormones causing metabolic and energy issues.",
-      icon: Activity,
-      color: "green",
+        "Immediate heart monitoring using electrocardiogram services.",
+      icon: HeartPulse,
+      color: "red",
     },
     {
       id: 4,
-      name: "OBESITY",
-      description:
-        "Excess body fat increasing risk of multiple chronic health conditions.",
-      icon: Scale,
+      name: "IN HOUSE DIABETIC LAB",
+      description: "Specialized lab for diabetic profile tests and monitoring.",
+      icon: Syringe,
       color: "orange",
     },
     {
       id: 5,
-      name: "PCOD",
-      description:
-        "Hormonal disorder causing irregular periods, weight gain, and infertility.",
-      icon: User,
-      color: "pink",
-    },
-    {
-      id: 6,
-      name: "CHEST INFECTION",
-      description:
-        "Infection in lungs or airways causing cough, fever, and breathlessness.",
-      icon: ScanFace, // closest match
+      name: "DIABETIC NEUROPATHY ASSESSMENT",
+      description: "Screening for nerve damage caused by prolonged diabetes.",
+      icon: BrainCircuit,
       color: "teal",
     },
     {
+      id: 6,
+      name: "DIABETIC FOOT CARE",
+      description:
+        "Comprehensive care to prevent and treat foot complications in diabetes.",
+      icon: Footprints,
+      color: "green",
+    },
+    {
       id: 7,
-      name: "INFECTIONS",
-      description:
-        "Dengue, malaria, typhoid – high fever with systemic complications.",
-      icon: Biohazard,
-      color: "red",
-    },
-    {
-      id: 8,
-      name: "NEUROPATHY",
-      description:
-        "Nerve damage leading to pain, numbness, or tingling sensations.",
-      icon: BrainCircuit,
-      color: "indigo",
-    },
-    {
-      id: 9,
-      name: "GASTRO INFECTION",
-      description:
-        "Stomach or intestinal infection causing nausea, vomiting, and diarrhea.",
-      icon: Radiation, // symbolic replacement
+      name: "ULTRASOUND FACILITY",
+      description: "Non-invasive imaging for internal organs and diagnostics.",
+      icon: ScanLine,
       color: "yellow",
     },
     {
-      id: 10,
-      name: "LIVER DISEASE",
+      id: 8,
+      name: "IN HOUSE DIETICIAN",
       description:
-        "Disorders affecting liver function, digestion, and metabolic regulation.",
-      icon: FlaskConical,
-      color: "emerald",
+        "Personalized dietary consultation for better health and disease management.",
+      icon: Salad,
+      color: "lime",
     },
     {
-      id: 11,
-      name: "NEURO HEART",
+      id: 9,
+      name: "ONLINE CONSULTATION",
       description:
-        "Brain-heart link issues causing fainting, palpitations, or fatigue.",
-      icon: Heart,
+        "Virtual appointments with doctors from the comfort of your home.",
+      icon: Video,
       color: "cyan",
+    },
+    {
+      id: 10,
+      name: "DAY CARE FACILITY",
+      description:
+        "Short-term medical care without requiring overnight admission.",
+      icon: Bed,
+      color: "pink",
     },
   ],
 };
@@ -201,37 +191,36 @@ export const doctorMeenakshiData = {
 export const doctorSachinData = {
   about: {
     name: "Dr. Sachin Madaan",
-    specialty: "Radiologist",
+    specialty: "Endovascular Surgeon and Radiologist",
     image: "/assets/doctor-pic2.jpg",
     titles: [
-      "Diabetes specialist",
-      "Metabolic disorders",
-      "MD Medicine",
-      "AIIMS Fellow",
+      "Consultant",
+      "Endovascular Surgeon",
+      "Interventional Radiologist",
     ],
     experience: "4.8+ Years",
     patients: "2000+",
     rating: "4.9",
     location: "Mohali Punjab",
-    phone: "+1 (555) 123-4567",
-    email: "dr.sarah@hospital.com",
+    phone: "+91 7302204937",
+    email: "sujeevaclinic@gmail.com",
     about:
-      "Dr. Devanshi Sharma, a compassionate and patient-focused diabetologist (or endocrinologist), specializes in holistic diabetes care, focusing on minimal medication burden and long-term wellness",
+      "Dr. Sachin Madaan is a consultant endovascular surgeon and interventional radiologist with expertise in image-guided, minimally invasive treatments for vascular disorders, tumors, and organ-related conditions.",
     education: [
       {
-        degree: "MD - Doctor of Medicine",
-        institution: "Harvard Medical School",
-        year: "2008",
+        degree: "MBBS",
+        institution: "Saurashtra University",
+        year: "2012",
       },
       {
         degree: "Residency in Internal Medicine",
-        institution: "Johns Hopkins Hospital",
-        year: "2011",
+        institution: "AIIMS Hospital",
+        year: "2016",
       },
       {
         degree: "Fellowship in Cardiology",
-        institution: "Mayo Clinic",
-        year: "2014",
+        institution: "AIIMS Hospital",
+        year: "2018",
       },
     ],
     certifications: [
@@ -241,12 +230,12 @@ export const doctorSachinData = {
       "Fellow of American College of Cardiology",
     ],
     specializations: [
-      "Interventional Cardiology",
-      "Heart Failure Management",
-      "Preventive Cardiology",
-      "Cardiac Catheterization",
-      "Echocardiography",
-      "Nuclear Cardiology",
+      "Endovascular Surgery",
+      "Interventional Radiology",
+      "Minimally Invasive Procedures",
+      "Pain Management Interventions",
+      "Vascular Interventions",
+      "Oncology Interventions",
     ],
     achievements: [
       "Top Doctor Award - New York Magazine (2023)",
@@ -258,91 +247,79 @@ export const doctorSachinData = {
   services: [
     {
       id: 1,
-      name: "Diabetes Management",
-      description: "Comprehensive care for type 1 and type 2 diabetes",
-      icon: Heart,
-      color: "blue",
-    },
-    {
-      id: 2,
-      name: "Blood Sugar Monitoring",
-      description:
-        "Advanced glucose tracking and continuous monitoring solutions",
-      icon: Activity,
-      color: "green",
-    },
-    {
-      id: 3,
-      name: "Insulin Therapy",
-      description:
-        "Personalized insulin plans and injection technique training",
+      name: "IN HOUSE PHARMACY",
+      description: "Access to essential medicines within the clinic premises.",
       icon: Pill,
       color: "purple",
     },
     {
-      id: 4,
-      name: "Diabetic Eye Care",
+      id: 2,
+      name: "IN HOUSE LAB FACILITY",
       description:
-        "Retinal screening and vision protection for diabetic patients",
-      icon: Eye,
+        "On-site laboratory for quick and accurate diagnostic tests.",
+      icon: FlaskConical,
+      color: "blue",
+    },
+    {
+      id: 3,
+      name: "IN HOUSE ECG FACILITY",
+      description:
+        "Immediate heart monitoring using electrocardiogram services.",
+      icon: HeartPulse,
+      color: "red",
+    },
+    {
+      id: 4,
+      name: "IN HOUSE DIABETIC LAB",
+      description: "Specialized lab for diabetic profile tests and monitoring.",
+      icon: Syringe,
       color: "orange",
     },
     {
       id: 5,
-      name: "Foot Care Management",
-      description: "Diabetic foot screening and ulcer prevention strategies",
-      icon: Star,
-      color: "pink",
-    },
-    {
-      id: 6,
-      name: "Nutritional Counseling",
-      description: "Customized meal plans and dietary guidance for diabetics",
-      icon: CheckCircle,
+      name: "DIABETIC NEUROPATHY ASSESSMENT",
+      description: "Screening for nerve damage caused by prolonged diabetes.",
+      icon: BrainCircuit,
       color: "teal",
     },
     {
-      id: 7,
-      name: "Lifestyle Coaching",
+      id: 6,
+      name: "DIABETIC FOOT CARE",
       description:
-        "Exercise programs and healthy lifestyle modification support",
-      icon: Users,
-      color: "indigo",
+        "Comprehensive care to prevent and treat foot complications in diabetes.",
+      icon: Footprints,
+      color: "green",
     },
     {
-      id: 8,
-      name: "Regular Check-ups",
-      description: "Scheduled monitoring and preventive care appointments",
-      icon: Calendar,
-      color: "red",
-    },
-    {
-      id: 9,
-      name: "Patient Education",
-      description: "Diabetes awareness workshops and self-management training",
-      icon: BookOpen,
+      id: 7,
+      name: "ULTRASOUND FACILITY",
+      description: "Non-invasive imaging for internal organs and diagnostics.",
+      icon: ScanLine,
       color: "yellow",
     },
     {
-      id: 10,
-      name: "Complication Prevention",
-      description: "Early detection and prevention of diabetic complications",
-      icon: Shield,
-      color: "emerald",
+      id: 8,
+      name: "IN HOUSE DIETICIAN",
+      description:
+        "Personalized dietary consultation for better health and disease management.",
+      icon: Salad,
+      color: "lime",
     },
     {
-      id: 11,
-      name: "HbA1c Testing",
-      description: "Advanced blood tests for long-term glucose control",
-      icon: Zap,
-      color: "violet",
-    },
-    {
-      id: 12,
-      name: "Thyroid Management",
-      description: "Comprehensive thyroid disorder diagnosis and treatment",
-      icon: Stethoscope,
+      id: 9,
+      name: "ONLINE CONSULTATION",
+      description:
+        "Virtual appointments with doctors from the comfort of your home.",
+      icon: Video,
       color: "cyan",
+    },
+    {
+      id: 10,
+      name: "DAY CARE FACILITY",
+      description:
+        "Short-term medical care without requiring overnight admission.",
+      icon: Bed,
+      color: "pink",
     },
   ],
 };

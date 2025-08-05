@@ -161,7 +161,7 @@ const Services = ({ services }) => {
             return (
               <div
                 key={service.id}
-                className={`group relative bg-white rounded-xl sm:rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 sm:hover:-translate-y-2 border-2 ${getColorClasses(
+                className={`group relative rounded-xl sm:rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 sm:hover:-translate-y-2 border-2 ${getColorClasses(
                   service.color
                 )} p-4 sm:p-6 cursor-pointer`}
               >
@@ -182,7 +182,7 @@ const Services = ({ services }) => {
 
                 {/* Content */}
                 <div className="space-y-2 sm:space-y-3">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-red-900 transition-colors">
                     {service.name}
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
@@ -191,7 +191,7 @@ const Services = ({ services }) => {
                 </div>
 
                 {/* Hover Effect Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-cyan-600/10 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-green-200/10 to-gray-600/10 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             );
           })}

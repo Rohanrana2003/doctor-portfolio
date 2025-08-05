@@ -154,9 +154,28 @@ const Contact = () => {
             </h2>
 
             <div className="space-y-4 sm:space-y-5">
+              {/* <!-- Address --> */}
               <div className="flex items-start space-x-3 sm:space-x-4">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
-                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-indigo-300 to-indigo-500 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 text-sm sm:text-base">
@@ -170,9 +189,23 @@ const Contact = () => {
                 </div>
               </div>
 
+              {/* <!-- Phone --> */}
               <div className="flex items-start space-x-3 sm:space-x-4">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
-                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-teal-300 to-teal-500 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
+                  </svg>
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 text-sm sm:text-base">
@@ -180,16 +213,30 @@ const Contact = () => {
                   </h3>
                   <a
                     href="tel:+917302204937"
-                    className="text-gray-600 mt-1 text-xs sm:text-sm"
+                    className="text-gray-600 mt-1 text-xs sm:text-sm hover:text-gray-900 transition-colors"
                   >
                     +91 7302204937
                   </a>
                 </div>
               </div>
 
+              {/* <!-- Email --> */}
               <div className="flex items-start space-x-3 sm:space-x-4">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
-                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-violet-300 to-violet-500 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 text-sm sm:text-base">
@@ -197,16 +244,30 @@ const Contact = () => {
                   </h3>
                   <a
                     href="mailto:sujeevaclinic@gmail.com"
-                    className="text-gray-600 mt-1 text-xs sm:text-sm"
+                    className="text-gray-600 mt-1 text-xs sm:text-sm hover:text-gray-900 transition-colors"
                   >
                     sujeevaclinic@gmail.com
                   </a>
                 </div>
               </div>
 
+              {/* <!-- Working Hours --> */}
               <div className="flex items-start space-x-3 sm:space-x-4">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-orange-400 to-red-500 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
-                  <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-amber-300 to-amber-500 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 text-sm sm:text-base">
@@ -455,7 +516,7 @@ const Contact = () => {
               <button
                 type="button"
                 onClick={handleSubmit}
-                className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-4 rounded-lg font-bold text-sm sm:text-base hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center space-x-2"
+                className="w-full cursor-pointer bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-4 rounded-lg font-bold text-sm sm:text-base hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center space-x-2"
               >
                 <Send className="w-4 h-4" />
                 <span>Book Appointment</span>
